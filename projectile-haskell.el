@@ -7,4 +7,4 @@
                     (if (member project-type '(haskell-cabal haskell-stack))
                         "Test"
                       ;; call the original implementation if it's not a haskell project
-                      (funcall (get 'projectile-test-suffix-function 'standard-value) project-type))))))
+		      (projectile-test-suffix project-type))))))
